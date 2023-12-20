@@ -1,5 +1,5 @@
 module "container_glrunner_java17" {
-  source    = "github.com/studio-telephus/tel-iac-modules-lxd.git//instance?ref=develop"
+  source    = "github.com/studio-telephus/terraform-lxd-instance.git?ref=main"
   name      = "container-glrunner-java17"
   image     = "images:debian/bookworm"
   profiles  = ["limits", "fs-dir", "nw-adm"]
@@ -16,8 +16,8 @@ module "container_glrunner_java17" {
     "${path.cwd}/filesystem-shared-ca-certificates",
     "${path.cwd}/filesystem",
   ]
-  exec = {
-    enabled    = true
+  exec_enabled = true
+  exec = [{
     entrypoint = "/mnt/install.sh"
     environment = {
       RANDOM_STRING                  = "d9c927f6-1463-4aaa-a2cf-37e7e2b281e1"
@@ -25,5 +25,5 @@ module "container_glrunner_java17" {
       GIT_SA_USERNAME                = var.git_sa_username
       GIT_SA_TOKEN                   = var.git_sa_token
     }
-  }
+  }]
 }
