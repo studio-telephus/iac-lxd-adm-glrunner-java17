@@ -1,6 +1,6 @@
-module "container_adm_glrunner_java17" {
-  source    = "github.com/studio-telephus/terraform-lxd-instance.git?ref=1.0.1"
-  name      = "container-adm-glrunner-java17"
+module "container_adm_glrunner_b2" {
+  source    = "github.com/studio-telephus/terraform-lxd-instance.git?ref=main"
+  name      = "container-adm-glrunner-b2"
   image     = "images:debian/bookworm"
   profiles  = ["limits", "fs-dir", "nw-adm"]
   autostart = false

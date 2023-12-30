@@ -1,1 +1,3 @@
-# iac-lxd-adm-glrunner-java17
+# iac-lxd-adm-glrunner-b2
+
+- Java17

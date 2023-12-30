@@ -9,8 +9,7 @@ echo "Install the base tools"
 apt-get update
 apt-get install -y \
  curl vim wget htop unzip gnupg2 netcat-traditional \
- bash-completion git apt-transport-https ca-certificates \
- software-properties-common
+ bash-completion git software-properties-common
 
 ## Run pre-install scripts
 sh /mnt/setup-ca.sh
