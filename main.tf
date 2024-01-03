@@ -1,5 +1,5 @@
 module "container_adm_glrunner_b2" {
-  source    = "github.com/studio-telephus/terraform-lxd-instance.git?ref=main"
+  source    = "github.com/studio-telephus/terraform-lxd-instance.git?ref=1.0.3"
   name      = "container-adm-glrunner-b2"
   image     = "images:debian/bookworm"
   profiles  = ["limits", "fs-dir", "nw-adm"]
